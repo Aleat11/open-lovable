@@ -74,6 +74,15 @@ export const appConfig = {
       'moonshotai/kimi-k2-instruct-0905': {
         provider: 'groq',
         model: 'moonshotai/kimi-k2-instruct-0905'
+      },
+      // Groq no longer serves Kimi K2 (404); gpt-oss via Groq is the working path
+      'openai/gpt-oss-120b': {
+        provider: 'groq',
+        model: 'openai/gpt-oss-120b'
+      },
+      'openai/gpt-oss-20b': {
+        provider: 'groq',
+        model: 'openai/gpt-oss-20b'
       }
     },
     

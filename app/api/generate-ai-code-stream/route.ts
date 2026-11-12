@@ -1215,7 +1215,7 @@ MORPH FAST APPLY MODE (EDIT-ONLY):
         // Determine which provider to use based on model
         const isAnthropic = model.startsWith('anthropic/');
         const isGoogle = model.startsWith('google/');
-        const isOpenAI = model.startsWith('openai/');
+        const isOpenAI = model.startsWith('openai/') && !model.startsWith('openai/gpt-oss'); // gpt-oss runs on Groq, not OpenAI
         const isKimiGroq = model === 'moonshotai/kimi-k2-instruct-0905';
         const modelProvider = isAnthropic ? anthropic : 
                               (isOpenAI ? openai : 

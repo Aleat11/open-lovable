@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import FirecrawlApp from '@mendable/firecrawl-js';
+import "@/lib/axios-fetch-adapter"; // sandbox proxy fix: axios must use the fetch adapter
 
 export async function POST(req: NextRequest) {
   try {
